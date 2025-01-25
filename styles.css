@@ -1,330 +1,248 @@
-:root {
-  --text-color: #1a1c20;
-  --link-color: #4a76ee;
-  --background-color: #eeeff1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* Genel Stil */
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  max-width: 1400px;
-  margin: 0 auto;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 50px;
-  height: 80px;
-}
-
-nav .left a {
-  color: var(--text-color);
-  font-size: 22px;
-  font-weight: 600;
-}
-
-nav .right a {
-  color: var(--text-color);
-  margin: 0 10px;
-}
-
-nav .right a:last-child {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  padding: 5px 15px;
-  border-radius: 5px;
-}
-
-nav .right a span {
-  margin-left: 5px;
-}
-
-/*  BÖLÜM 1: AnaSayfa  */
+/* Hero Section */
 .hero-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.hero-section .container {
+  max-width: 1140px;
+}
+
+.hero-section .row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  margin: 50px 0;
-  margin-bottom: 100px;
-  gap: 40px;
 }
 
-.hero-section .text {
-  flex: 5;
+.hero-section .hero-text {
+  text-align: left;
 }
 
-.hero-section .text h2 {
-  font-size: 45px;
+.hero-section .hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
 }
 
-.hero-section .text .links {
-  margin-top: 25px;
+.hero-section .hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
-.hero-section .text .links a {
+.hero-section .links {
+  margin-top: 20px;
+}
+
+.hero-section .links a {
   display: inline-block;
-  padding: 5px 10px;
-  border: 2px solid var(--link-color);
+  margin-right: 15px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  text-decoration: none;
   border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  transition: .1s;
 }
 
-.hero-section .text .links a:hover {
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+.hero-section .links a.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
 }
 
-.hero-section .headshot {
-  flex: 2;
-  display: flex;
-  justify-content: right;
+.hero-section .links a.btn-primary:hover {
+  background-color: #0056b3;
 }
 
-.hero-section .headshot img {
-  width: 350px;
+.hero-section .links a.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.hero-section .links a.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.hero-section .links a.btn-outline-primary {
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.hero-section .links a.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.hero-section .hero-image img {
   border-radius: 50%;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* BÖLÜM  2: Beceriler */
+
+/* Beceriler Section */
 .beceriler-section {
-  padding: 0 50px;
-  margin-bottom: 100px;
+  background-color: #f8f9fa;
+  padding: 80px 0;
 }
 
 .beceriler-section h2 {
+  font-size: 2.5rem;
   text-align: center;
-  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .beceriler-section .text {
+  font-size: 1.1rem;
+  line-height: 1.6;
   text-align: center;
-  margin-bottom: 20px;
+  color: #555;
+  margin-bottom: 40px;
 }
 
-.beceriler-section .cells {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.beceriler-section .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.beceriler-section .cells .cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  width: 200px;
-  padding: 10px 20px;
-  margin: 10px;
-  border: 1.5px solid #d3d3d3;
-  border-radius: 5px;
+.beceriler-section .skill-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.beceriler-section .cells .cell img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  border-radius: 2px;
+.beceriler-section .skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.beceriler-section .cells .cell span {
-  font-size: 18px;
+.beceriler-section .skill-item img {
+  max-width: 80px;
+  margin-bottom: 15px;
 }
 
-/* BÖLÜM  3: Youtube */
+.beceriler-section .skill-item span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+
+/* Youtube */
 .youtube-section {
-  padding: 0 50px;
-  margin-bottom: 100px;
+  background-color: white;
+  padding: 80px 0;
 }
 
 .youtube-section h2 {
-  font-size: 35px;
-  margin-bottom: 30px;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .youtube-section .group {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 60px;
 }
 
-.youtube-section .group .person-details {
+.youtube-section .person-details {
   text-align: center;
-  flex: 2;
-}
-
-.youtube-section .group .person-details img {
   width: 200px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+}
+
+.youtube-section .person-details img {
   border-radius: 50%;
-  margin-bottom: 10px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-.youtube-section .group .person-details p {
-  font-weight: 600;
+.youtube-section .text {
+  width: 500px;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
-.youtube-section .group .person-details p:last-child {
-  font-weight: normal;
-}
-
-.youtube-section .group .text {
-  flex: 8;
-}
-
-/* BÖLÜM  4: baglanti */
+/* Bağlantı Formu */
 .baglanti-section {
-  padding: 0 50px;
-  margin-bottom: 100px;
+  background-color: white;
+  padding: 80px 0;
 }
 
 .baglanti-section h2 {
-  font-size: 35px;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .baglanti-section .group {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 
-.baglanti-section .group .text {
-  flex: 3;
-  margin-top: 20px;
+.baglanti-section .text {
+  width: 45%;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
-.baglanti-section .group form {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
+.baglanti-section form {
+  width: 45%;
 }
 
-.baglanti-section .group form input,
-.baglanti-section .group form textarea {
-  font-family: 'Poppins', sans-serif;
-  border: 2px solid var(--link-color);
-  background-color: transparent;
+.baglanti-section form label {
+  font-size: 1.125rem;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.baglanti-section form input,
+.baglanti-section form textarea {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  outline: none;
-  resize: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-.baglanti-section .group form button {
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  background-color: var(--link-color);
+.baglanti-section form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  height: 50px;
+  border-radius: 5px;
+  font-size: 1.125rem;
   cursor: pointer;
-  transition: .1s;
 }
 
-.baglanti-section .group form button:hover {
-  filter: brightness(.9);
-}
-
-@media (max-width: 850px) {
-  /*  BÖLÜM 1: AnaSayfa  */
-  .hero-section .text h2 {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 740px) {
-  /*  BÖLÜM 1: AnaSayfa  */
-  .hero-section {
-    flex-direction: column-reverse;
-  }
-
-  .hero-section .headshot img {
-    width: 300px;
-  }
-
-  /* BÖLÜM 3: youtube */
-  .youtube-section {
-    text-align: center;
-  }
-
-  .youtube-section .group {
-    flex-direction: column;
-  }
-
-  /* BÖLÜM 4: baglanti */
-  .baglanti-section .group {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  /* NAVBAR */
-  nav {
-    padding: 0 20px;
-  }
-
-  nav .right a {
-    font-size: 22px;
-  }
-
-  nav .right a:last-child {
-    color: var(--text-color);
-    background-color: transparent;
-    padding: 0;
-  }
-
-  nav .right a span {
-    display: none;
-  }
-
-  /*  BÖLÜM 1: AnaSayfa  */
-  .hero-section {
-    padding: 0 20px;
-  }
-
-  .hero-section .text h2 {
-    font-size: 30px;
-  }
-
-  /* BÖLÜM 2: Beceriler */
-  .beceriler-section {
-    padding: 0 20px;
-  }
-
-  .beceriler-section .cells .cell span {
-    font-size: 16px;
-  }
-
-  /* BÖLÜM 3: youtube */
-  .youtube-section {
-    padding: 0 20px;
-  }
-
-  /* BÖLÜM 4: baglanti */
-  .baglanti-section {
-    padding: 0 20px;
-  }
+.baglanti-section form button:hover {
+  background-color: #0056b3;
 }
